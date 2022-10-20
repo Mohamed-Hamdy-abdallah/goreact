@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 function SignUp() {
 	const history = useNavigate();
 	const [email, setEmail] = useState("");
-	const [name, setName] = useState("");
+	// const [name, setName] = useState("");
 	const [password, setPassword] = useState("");
 	const [firstName, setFirstName] = useState("");
 	const [lastName, setLastName] = useState("");

@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
-	const [err, setError] = useState(null);
+	// const [err, setError] = useState(null);
 	const [loading, setLoading] = useState(false);
 	const history = useNavigate();
 	
@@ -35,23 +35,23 @@ function Navbar() {
 
 		setLoading(false);
 	}, [isLoggedIn]);
-	const handleLogOut = (e) => {
-		e.preventDefault();
-		axios.get("/api/logout", { withCredentials: true }).then((res) => {
-			console.log("🚀 -----------------------------------------------------🚀");
-			console.log("🚀 ~ file: Navbar.js ~ line 53 ~ axios.get ~ res", res);
-			console.log("🚀 -----------------------------------------------------🚀");
+	// const handleLogOut = (e) => {
+	// 	e.preventDefault();
+	// 	axios.get("/api/logout", { withCredentials: true }).then((res) => {
+	// 		console.log("🚀 -----------------------------------------------------🚀");
+	// 		console.log("🚀 ~ file: Navbar.js ~ line 53 ~ axios.get ~ res", res);
+	// 		console.log("🚀 -----------------------------------------------------🚀");
 
-			if (res.status === 200) {
-				setIsLoggedIn(false);
-				history("/");
-			} else {
-				console.log("🚀 ------------------------------------------------🚀");
-				console.log("🚀 ~ file: Login.js ~ line 19 ~ click ~ res", res);
-				console.log("🚀 ------------------------------------------------🚀");
-			}
-		});
-	};
+	// 		if (res.status === 200) {
+	// 			setIsLoggedIn(false);
+	// 			history("/");
+	// 		} else {
+	// 			console.log("🚀 ------------------------------------------------🚀");
+	// 			console.log("🚀 ~ file: Login.js ~ line 19 ~ click ~ res", res);
+	// 			console.log("🚀 ------------------------------------------------🚀");
+	// 		}
+	// 	});
+	// };
 
 	if (loading)
 		return (

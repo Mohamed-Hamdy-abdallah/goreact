@@ -10,7 +10,7 @@ function Create() {
 	const [text, setText] = useState("");
 	const [err, setError] = useState();
 	const [loading, setLoading] = useState(false);
-	const [user, setUser] = useState();
+	// const [user, setUser] = useState();
 
 	useEffect(() => {
 		setLoading(true);
@@ -26,7 +26,7 @@ function Create() {
 					navigate("/login");
 				} else {
 					console.log("user" , res.data.user)
-					setUser(res.data.user.Id);
+					// setUser(res.data.user.Id);
 				}
 			})
 			.catch((e) => {
