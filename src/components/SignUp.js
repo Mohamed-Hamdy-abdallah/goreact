@@ -18,7 +18,7 @@ function SignUp() {
 		event.preventDefault();
 		axios
 			.post(
-				"/api/register",
+				"https://app-blog-react-project.herokuapp.com/api/register",
 				{
 
 					email: email,

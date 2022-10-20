@@ -15,7 +15,7 @@ function Create() {
 	useEffect(() => {
 		setLoading(true);
 		axios
-			.get("/api/getuser", {
+			.get("https://app-blog-react-project.herokuapp.com/api/getuser", {
 				withCredentials: true,
 			})
 			.then((res) => {
@@ -44,7 +44,7 @@ function Create() {
 		event.preventDefault();
 		axios
 			.post(
-				"/api/blog",
+				"https://app-blog-react-project.herokuapp.com/api/blog",
 				{
 					title: title,
 					desc: text,
