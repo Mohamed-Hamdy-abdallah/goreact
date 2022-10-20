@@ -16,7 +16,7 @@ function Edit() {
 	useEffect(() => {
 		setLoading(true);
 		axios
-			.get("/api/getuser", {
+			.get("https://app-blog-react-project.herokuapp.com/api/getuser", {
 				withCredentials: true,
 			})
 			.then((res) => {
@@ -45,7 +45,7 @@ function Edit() {
 		event.preventDefault();
 		axios
 			.put(
-				`/api/blog/${id}`,
+				`https://app-blog-react-project.herokuapp.com/api/blog/${id}`,
 				{
 					title: title,
 					desc: text,

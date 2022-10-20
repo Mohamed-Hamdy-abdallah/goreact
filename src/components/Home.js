@@ -11,7 +11,7 @@ function Home() {
 	useEffect(() => {
 		setLoading(true);
 		axios
-			.get("/api/blog", {
+			.get("https://app-blog-react-project.herokuapp.com/api/blog", {
 				// withCredentials: true,
 			})
 			.then((res) => {

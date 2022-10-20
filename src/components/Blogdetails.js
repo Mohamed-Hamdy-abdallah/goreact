@@ -14,7 +14,7 @@ function Blogdetails() {
 	useEffect(() => {
 		setLoading(true);
 		axios
-			.get(`/api/blog/${id}`, {
+			.get(`https://app-blog-react-project.herokuapp.com/api/blog/${id}`, {
 				withCredentials: true,
 			})
 			.then((res) => {
@@ -36,7 +36,7 @@ function Blogdetails() {
 		setLoading(true);
 		if (data) {
 			axios
-				.get("/api/getuser", {
+				.get("https://app-blog-react-project.herokuapp.com/api/getuser", {
 					withCredentials: true,
 				})
 				.then((res) => {
@@ -58,7 +58,7 @@ function Blogdetails() {
 	const click = async () => {
 		setLoading(true);
 		try {
-			await axios.delete(`/api/blog/${id}`, {
+			await axios.delete(`https://app-blog-react-project.herokuapp.com/api/blog/${id}`, {
 				withCredentials: true,
 			});
 			history("/");
