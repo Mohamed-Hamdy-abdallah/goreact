@@ -14,7 +14,7 @@ function Login() {
 		event.preventDefault();
 		axios
 			.post(
-				"https://app-blog-react-project.herokuapp.com/api/login",
+				"/api/login",
 				{
 					email: email,
 					password: password,

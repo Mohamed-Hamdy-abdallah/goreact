@@ -13,7 +13,7 @@ function Navbar() {
 		console.log(document.cookie)
 		setLoading(true);
 		axios
-			.get("https://app-blog-react-project.herokuapp.com/api/getuser", {
+			.get("/api/getuser", {
 				withCredentials: true,
 			
 			})
