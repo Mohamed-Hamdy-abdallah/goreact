@@ -37,5 +37,8 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://app-blog-react-project.herokuapp.com"
+  "proxy": "https://app-blog-react-project.herokuapp.com",
+  "devDependencies": {
+    "netlify-cli": "^12.0.11"
+  }
 }
